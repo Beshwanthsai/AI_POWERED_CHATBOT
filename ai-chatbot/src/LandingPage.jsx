@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import './styles/Landing.css';
 import chatbotImage from './assets/Beshwanth.jpg';
-
-
+import { useNavigate } from 'react-router-dom';
 
 const LandingPage = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const navigate = useNavigate();
+    const GoToAuth = () => {
+        navigate("/login");
+    }
 
     return (
         <div className="container">
@@ -15,7 +18,7 @@ const LandingPage = () => {
                     <a href="#features">Features</a>
                     <a href="#about">About</a>
                     <a href="#contact">Contact</a>
-                    <button className="login-btn">Login</button>
+                    <button className="login-btn" onClick={GoToAuth}>Login</button>
                 </div>
             </nav>
 
@@ -24,7 +27,7 @@ const LandingPage = () => {
                     <h1>Hello Welcome to my AI-Powered ChatBot</h1>
                     <p>Providing a seamless and amazing AI integrated platform</p>
                     <br /><br />
-                    <button className="cta-button">Get Started</button>
+                    <button className="cta-button" onClick={GoToAuth}>Get Started</button>
                 </div>
                 <div className="hero-image">
                     <img src={chatbotImage} alt="BeshwanthChatbotimg1" />

@@ -47,7 +47,7 @@
   display: flex;
   gap: 2rem;
   align-items: center;
-  background-color: burlywood;
+  background-color: hsl(34, 57%, 70%);
 }
 
 .herocontent {
