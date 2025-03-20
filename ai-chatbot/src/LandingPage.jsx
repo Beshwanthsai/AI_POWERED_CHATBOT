@@ -9,6 +9,8 @@ const LandingPage = () => {
     const GoToAuth = () => {
         navigate("/login");
     }
+    
+
 
     return (
         <div className="container">
