@@ -6,10 +6,12 @@ import bootstrap from 'bootstrap/dist/css/bootstrap.min.css'
 export default function Landing() {
     return (
         <>
+        <div >
+
             <center>
                 <div className='mb-5' style={{ backgroundColor: "yellowgreen", borderRadius: "15px" }}>Landing Page</div>
             </center>
-            <Card style={{ backgroundColor: "lightblue" }} className='mb-5'>
+            <Card style={{ backgroundColor: "lightblue" }} className='mb-5 w-100 text-center'>
                 Hi Hello Welcome to Landing Page
 
             </Card>
@@ -23,6 +25,7 @@ export default function Landing() {
                     Need an account? <Link to={"/signup"}>SignUp</Link>
                 </div>
             </div>
+        </div>
 
         </>
     )

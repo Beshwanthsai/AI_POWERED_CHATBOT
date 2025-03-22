@@ -3,6 +3,7 @@ import { Form, Button, Card ,Alert} from "react-bootstrap"
 import bootstrap from 'bootstrap/dist/css/bootstrap.min.css'
 import { useAuth } from "../contexts/AuthContext"
 import { Link, useNavigate } from "react-router-dom"
+import Dashboard from "./Dashboard"
 
 
 export default function Login() {
@@ -21,7 +22,7 @@ export default function Login() {
             setError("")
             setLoading(true)
             await login(emailRef.current.value, passwordRef.current.value)
-            navigate("/")
+            navigate("/Dashboard")
         } catch (err) {
             // Show the specific Firebase error message
             setError(err.message || "Failed to log in")
@@ -46,7 +47,7 @@ export default function Login() {
                             <Form.Label>Password</Form.Label>
                             <Form.Control type="password" ref={passwordRef} required />
                         </Form.Group>
-                        <Button className="w-100 mt-3" type="submit"  disabled={loading}>
+                        <Button className="w-100 mt-3" type="submit"  disabled={loading} >
                             Log In
                         </Button>
                     </Form>
@@ -54,6 +55,9 @@ export default function Login() {
             </Card>
             <div className="w-100 text-center mt-2">
                Need an account? <Link to={"/signup"}>SignUp</Link>
+            </div>
+            <div className="w-100 text-center mt-2">
+               <Link to={"/"}>Home</Link>
             </div>
         </>
     )
