@@ -6,14 +6,14 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Dashboard from './Dashboard';
 import Login from './Login';
 import Landing from './Landing';
-import { Navbar } from './Landing';
+// import { Navbar } from './Landing';
 
 function App() {
     return (
         
         <Container className='d-flex align-items-center justify-content-center mt-5 '
             style={{ minHeight: '100vh' }}>
-            <Navbar />
+            {/* <Navbar /> */}
             <div className='w-100' style={{ maxWidth: '400px' }}>
             
                 <Router>

@@ -4,6 +4,7 @@ import { Form, Button, Card ,Alert} from "react-bootstrap"
 import bootstrap from 'bootstrap/dist/css/bootstrap.min.css'
 import { useAuth } from "../contexts/AuthContext"
 import { Link } from "react-router-dom"
+// import {login} from './Login'
 
 export default function SignUp() {
     const emailRef = useRef()
@@ -20,7 +21,6 @@ export default function SignUp() {
             return setError("Passwords do not match")
         }
 
-        // Password length validation
         if (passwordRef.current.value.length < 6) {
             return setError("Password must be at least 6 characters")
         }
@@ -30,7 +30,7 @@ export default function SignUp() {
             setLoading(true)
             await signup(emailRef.current.value, passwordRef.current.value)
         } catch (err) {
-            // Show the specific Firebase error message
+ 
             setError(err.message || "Failed to create an account")
             console.error("Signup error:", err)
         }
