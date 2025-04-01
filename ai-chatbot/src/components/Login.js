@@ -34,7 +34,7 @@ export default function Login() {
 
     return (
         <>
-            <Card>
+            <Card className="mt-5">
                 <Card.Body>
                     <h2 className="text-center mb-4">Log In</h2>
                     {error && <Alert variant="danger">{error}</Alert>}
@@ -53,10 +53,10 @@ export default function Login() {
                     </Form>
                 </Card.Body>
             </Card>
-            <div className="w-100 text-center mt-2">
+            <div className="w-100 text-center ">
                Need an account? <Link to={"/signup"}>SignUp</Link>
             </div>
-            <div className="w-100 text-center mt-2">
+            <div className="w-100 text-center ">
                <Link to={"/"}>Home</Link>
             </div>
         </>

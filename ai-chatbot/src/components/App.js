@@ -11,24 +11,37 @@ import Landing from './Landing';
 function App() {
     return (
         
-        <Container className='d-flex align-items-center justify-content-center mt-5 '
+        <div className='justify-content-center d-flex'
             style={{ minHeight: '100vh' }}>
             {/* <Navbar /> */}
-            <div className='w-100' style={{ maxWidth: '400px' }}>
+            <div className='w-100' style={{ minWidth: '300px' }}>
             
                 <Router>
                     <AuthProvider>
                         <Routes>
-                            
                             <Route path="/" element={<Landing />} />
-                            <Route path="/Dashboard" element={<Dashboard />} />
-                            <Route path="/signup" element={<SignUp />} />
-                            <Route path="/login" element={<Login />} />
+                            <Route path="/Dashboard" element={
+                                <div className='d-flex justify-content-center'>
+                                    <div style={{maxWidth:'100px', width:'100%'}}>
+                                        <Dashboard />
+                                    </div>
+                                </div>
+                            } />
+                            <Route path="/signup" element={<div className='d-flex justify-content-center'>
+                                    <div style={{maxWidth:'400px', width:'100%'}}>
+                                        <SignUp />
+                                    </div>
+                                </div>} />
+                            <Route path="/login" element={<div className='d-flex justify-content-center'>
+                                    <div style={{maxWidth:'400px', width:'100%'}}>
+                                        <Login />
+                                    </div>
+                                </div>} />
                         </Routes>
                     </AuthProvider>
                 </Router>
             </div>
-        </Container>
+        </div>
     )
 }
 

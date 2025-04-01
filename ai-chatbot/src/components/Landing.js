@@ -31,7 +31,7 @@ export default function Landing() {
                     Get Started <Link to={"/login"}>Log In</Link>
                 </div>
                 <br /><br />
-                <p>HI Hello guys if you are not having an account? SignUp to ChatBot</p>
+                <p className='d-flex justify-content-center'>HI Hello guys if you are not having an account? SignUp to ChatBot</p>
                 <div className='mt-10'>
                     <div className="w-100 text-center mt-6">
                         Need an account? <Link to={"/signup"}>SignUp</Link>
