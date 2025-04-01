@@ -21,8 +21,8 @@ function App() {
                         <Routes>
                             <Route path="/" element={<Landing />} />
                             <Route path="/Dashboard" element={
-                                <div className='d-flex justify-content-center'>
-                                    <div style={{maxWidth:'100px', width:'100%'}}>
+                                <div className='d-flex justify-content-center mt-5'>
+                                    <div style={{maxWidth:'500px', width:'100%', marginLeft:"auto"}}>
                                         <Dashboard />
                                     </div>
                                 </div>
