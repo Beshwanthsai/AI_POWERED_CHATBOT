@@ -1,9 +1,11 @@
 import React, { useRef , useState} from "react"
 import { Form, Button, Card ,Alert} from "react-bootstrap"
-import bootstrap from 'bootstrap/dist/css/bootstrap.min.css'
+// import bootstrap from 'bootstrap/dist/css/bootstrap.min.css'
 import { useAuth } from "../contexts/AuthContext"
 import { Link, useNavigate } from "react-router-dom"
-import Dashboard from "./Dashboard"
+import '../styles/Signup.css'
+
+
 
 
 export default function Login() {
@@ -34,6 +36,7 @@ export default function Login() {
 
     return (
         <>
+        
             <Card className="mt-5">
                 <Card.Body>
                     <h2 className="text-center mb-4">Log In</h2>

@@ -1,0 +1,50 @@
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    margin-top: 30px;
+}
+
+card ,card1,card2{
+    display: block;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 2rem;
+    margin-bottom: 50px;
+    background-color: linear-gradient(135deg, #0e5bcf 0%, #c3cfe2 100%);
+    box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    card {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+}

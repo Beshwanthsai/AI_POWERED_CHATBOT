@@ -1,10 +1,11 @@
 
 import React, { useRef , useState} from "react"
 import { Form, Button, Card ,Alert} from "react-bootstrap"
-import bootstrap from 'bootstrap/dist/css/bootstrap.min.css'
 import { useAuth } from "../contexts/AuthContext"
 import { Link } from "react-router-dom"
-// import {login} from './Login'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import '../styles/Signup.css'
+
 
 export default function SignUp() {
     const emailRef = useRef()

@@ -1,0 +1,230 @@
+
+body{
+    background: linear-gradient(135deg, #0e5bcf 0%, #c3cfe2 100%);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #2c3e50;
+}
+
+.dashboard-container {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    gap: 20px;
+    flex-direction: row;
+    min-height: 85vh;
+    background: linear-gradient(135deg, #0e5bcf 0%, #c3cfe2 100%);
+}
+
+.profile-section, .chat-section {
+    flex: 1;
+    padding: 25px;
+    background: rgba(158, 205, 249, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+    backdrop-filter: blur(4px);
+    transition: transform 0.3s ease;
+}
+
+.profile-section:hover, .chat-section:hover {
+    transform: translateY(-5px);
+}
+
+.dashboard-title, .chat-title {
+    color: #2c3e50;
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-text {
+    color: #34495e;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.profile-header {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.profile-info {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 15px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-actions, .logout-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.update-profile-btn {
+    display: inline-block;
+    width: 75%;
+    padding: 12px;
+    background: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.update-profile-btn:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+.logout-btn {
+    width: 75%;
+    padding: 12px;
+    border: 4px solid white;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Chat section styling */
+.chat-section {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+}
+
+.messages-container {
+    flex: 1;
+    overflow-y: auto;
+    padding: 15px;
+    background: rgb(217, 236, 246);
+    border-radius: 10px;
+    border: 5px solid #fffdfd;
+    margin-bottom: 15px;
+}
+
+.message {
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.user-message {
+    margin-left: auto;
+    background: #3471db;
+    color: white;
+}
+
+.bot-message {
+    margin-right: auto;
+    background: #94baf7;
+    border: 1px solid #e0e0e0;
+}
+
+.sender-name {
+    font-weight: 600;
+    margin-right: 8px;
+}
+
+.input-container {
+    display: flex;
+    gap: 10px;
+}
+
+.message-input {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #3e5ff4;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.message-input:focus {
+    outline: none;
+    border-color: #343fdb;
+}
+
+.send-button {
+    padding: 10px 20px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.send-button:hover {
+    background: #69b9ef;
+    transform: translateY(1px);
+}
+
+
+.messages-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.messages-container::-webkit-scrollbar-track {
+    background: #55b7e8;
+    border-radius: 4px;
+}
+
+.messages-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.messages-container::-webkit-scrollbar-thumb:hover {
+    background: #1257ec;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.message {
+    animation: fadeIn 0.3s ease;
+}
+
+
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column !important;
+        padding: 10px;
+    }
+
+    .profile-section, 
+    .chat-section {
+        margin: 10px 0;
+        padding: 15px;
+    }
+
+    .btn {
+        width: 100% !important;
+    }
+
+    .user-message,
+    .bot-message {
+        max-width: 85%;
+    }
+}
