@@ -12,7 +12,7 @@ card ,card1,card2{
     margin: 0 auto;
     padding: 2rem;
     margin-bottom: 50px;
-    background-color: linear-gradient(135deg, #0e5bcf 0%, #c3cfe2 100%);
+    background-color: linear-gradient(135deg, #0ecf25 0%, #c3cfe2 100%);
     box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
 }
