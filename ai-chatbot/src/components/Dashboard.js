@@ -103,7 +103,7 @@ export default function Dashboard() {
                 <div className="messages-container">
                     {messages.map((msg, index) => (
                         <div key={index} className={`message ${msg.sender}-message`}>
-                            <strong className="sender-name">{msg.sender === "user" ? "You" : "tanjirot"}:</strong>
+                            <strong className="sender-name">{msg.sender === "user" ? "You" : "tanjirokomado"}:</strong>
                             <span className="message-text">{msg.text}</span>
                         </div>
                     ))}
